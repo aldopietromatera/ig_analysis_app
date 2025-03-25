@@ -11,9 +11,6 @@ st.header("Find out who doesn't follow you back :sunglasses:")
 timestamp = pd.Timestamp("now")
 timestamp = timestamp.strftime("%Y%m%d_%H%M%S")
 
-# give me the important emojis
-
-
 # Import the whole connections folder
 connections = st.file_uploader(
     "Upload connections folder", type=["zip"], key="connections"
@@ -45,7 +42,7 @@ if not connections:
 
         """
     )
-    st.warning("⚠️ Data is not shared with anyone and is deleted after the analysis.")
+    st.warning("""⚠️ Data is not shared with anyone and is deleted after the analysis.""")
 if connections:
     import zipfile
 
