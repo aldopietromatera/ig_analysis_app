@@ -87,7 +87,7 @@ if connections:
     do_not_follow_back = following_set - followers_set
     df_not_following_back = pd.DataFrame(list(do_not_follow_back), columns=["username"])
 
-    st.subheader("Users who don't follow back")
+    st.subheader("Users who don't follow you back")
     st.dataframe(df_not_following_back, height=200)
 
     # Download CSV file
@@ -99,32 +99,32 @@ if connections:
         "text/csv",
     )
 
-    # Compare with previous data
-    previous_data = st.checkbox("Do you have the previous data to compare with?")
-    if previous_data:
-        previous_data = st.file_uploader(
-            "Upload previous not following back data", type=["csv"], key="previous_data"
-        )
-        if previous_data:
-            df_not_following_back_previous = pd.read_csv(previous_data)
-            df_not_following_back_diff = df_not_following_back[
-                ~df_not_following_back["username"].isin(
-                    df_not_following_back_previous["username"]
-                )
-            ]
-            # df_not_following_back_diff.to_csv(
-            #     "not_following_back_diff.csv", index=False
-            # )
+    # # Compare with previous data
+    # previous_data = st.checkbox("Do you have the previous data to compare with?")
+    # if previous_data:
+    #     previous_data = st.file_uploader(
+    #         "Upload previous not following back data", type=["csv"], key="previous_data"
+    #     )
+    #     if previous_data:
+    #         df_not_following_back_previous = pd.read_csv(previous_data)
+    #         df_not_following_back_diff = df_not_following_back[
+    #             ~df_not_following_back["username"].isin(
+    #                 df_not_following_back_previous["username"]
+    #             )
+    #         ]
+    #         # df_not_following_back_diff.to_csv(
+    #         #     "not_following_back_diff.csv", index=False
+    #         # )
 
-            st.subheader("Newly Detected Not Following Back")
-            st.dataframe(df_not_following_back_diff)
+    #         st.subheader("Newly Detected Not Following Back")
+    #         st.dataframe(df_not_following_back_diff)
 
-            st.download_button(
-                "Download Difference List in csv format",
-                df_not_following_back_diff.to_csv(index=False).encode("utf-8"),
-                timestamp + "_not_following_back_diff.csv",
-                "text/csv",
-            )
+    #         st.download_button(
+    #             "Download Difference List in csv format",
+    #             df_not_following_back_diff.to_csv(index=False).encode("utf-8"),
+    #             timestamp + "_not_following_back_diff.csv",
+    #             "text/csv",
+    #         )
 
     # delete the connections folder
     shutil.rmtree("connections")
