@@ -44,6 +44,7 @@ if not connections:
 
         """
     )
+    st.warning("⚠️ Data is not shared with anyone and is deleted after the analysis.")
 if connections:
     import zipfile
 
