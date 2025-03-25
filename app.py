@@ -5,6 +5,7 @@ import shutil
 
 st.set_page_config(page_title="Instagram Analysis", page_icon="📊")
 st.title("Instagram Followers Analysis")
+st.header("Find out who doesn't follow you back on Instagram :sunglasses:")
 
 # For adding date and time to the file names when downloading
 timestamp = pd.Timestamp("now")
