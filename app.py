@@ -95,6 +95,11 @@ if connections:
     do_not_follow_back = following_set - followers_set
     df_not_following_back = pd.DataFrame(list(do_not_follow_back), columns=["username"])
 
+    # Sort alphabetically
+    df_not_following_back = df_not_following_back.sort_values(
+        by="username"
+    ).reset_index(drop=True)
+
     st.subheader(str(len(df_not_following_back)) + " users/pages don't follow you back")
     st.dataframe(df_not_following_back, height=200)
 
@@ -124,7 +129,15 @@ if connections:
                 )
             ]
 
-            st.subheader("Newly Detected Not Following Back")
+            # Sort alphabetically
+            df_not_following_back_diff = df_not_following_back_diff.sort_values(
+                by="username"
+            )
+
+            st.subheader(
+                str(len(df_not_following_back_diff))
+                + " newly detected Not Following Back users/pages"
+            )
             # Display the difference if there is any
             if df_not_following_back_diff.empty:
                 st.info("No new users detected! :smile:")
