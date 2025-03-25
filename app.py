@@ -69,7 +69,7 @@ if connections:
         st.error("Please make sure the ZIP file you uploaded is correct.")
         st.stop()
     else:
-        st.success("Connections folder uploaded successfully.")
+        st.success("ZIP file uploaded successfully.")
 
     # Read followers file
     df_followers = pd.read_json(followers_path)
