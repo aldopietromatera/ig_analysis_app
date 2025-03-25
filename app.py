@@ -47,10 +47,10 @@ if not connections:
         11. Choose the desired date range.
         12. ⚠️ Select the JSON format (important!).
         13. Tap "Create File".
-        14. Wait for the email and download the ZIP file from it ⏳.
+        14. Wait for the email and download the ZIP file from Instagram ⏳.
         15. Upload the ZIP file here, and Voilà! 🎉
 
-        Note: The email may take some time to arrive, depending on the size of your data. 🕒
+        Note: The email may take some time (hours...) to arrive, depending on the size of your data. 🕒
         """
     )
 
