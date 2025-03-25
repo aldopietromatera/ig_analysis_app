@@ -5,7 +5,7 @@ import shutil
 
 st.set_page_config(page_title="Instagram Analysis", page_icon="📊")
 st.title("Instagram Followers Analysis")
-st.header("Find out who doesn't follow you back on Instagram :sunglasses:")
+st.header("Find out who doesn't follow you back :sunglasses:")
 
 # For adding date and time to the file names when downloading
 timestamp = pd.Timestamp("now")
@@ -30,9 +30,9 @@ if not connections:
             4. Click on "Your Activity"
             5. Click on "Download your information" at the very bottom
             6. Click on "Download or transfer information"
-            7. Select "Some of your information"
+            7. ⚠️ Select "Some of your information" (not all your information...)
             8. Scroll down until the Contacts section and select
-                "Follower and people/pages you follow"
+                "Followers and people/pages you follow"
             9. Click on "Next"
             10. Select "Download on your phone"
             11. Select the date range you want
@@ -41,7 +41,7 @@ if not connections:
             14. Wait for the email and download the ZIP file from it ⏳
             15. Upload the ZIP file here and Voilà! 🎉
 
-            Note that the email may take some time to arrive...
+            Note that the email may take some time to arrive depending on the size of your data. 🕒
 
         """
     )
