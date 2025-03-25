@@ -27,7 +27,7 @@ if not connections:
             2. Go to your profile
             3. Click on the three lines in the top right corner
             4. Click on "Your Activity"
-            5. Click on "Download you information" at the very bottom
+            5. Click on "Download your information" at the very bottom
             6. Click on "Download or transfer information"
             7. Select "Some of your information"
             8. Scroll down until the Contacts section and select
