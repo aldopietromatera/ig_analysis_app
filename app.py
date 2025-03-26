@@ -18,7 +18,10 @@ agree = st.checkbox(
 if not agree:
     st.warning("You must agree to the terms before using the app.")
     st.warning(
-        """⚠️Your data remains private and is automatically deleted after the analysis."""
+        """
+         Your data remains private and is automatically deleted after the analysis.
+        """,
+        icon="⚠️",
     )
     st.stop()
 
@@ -38,8 +41,8 @@ if not connections:
         2. Go to your profile.
         3. Tap the three lines in the top right corner.
         4. Tap "Your Activity".
-        5. Tap "Download Your Information" at the very bottom.
-        6. Tap "Download or Transfer Your Information."
+        5. At the very bottom, tap "Download Your Information".
+        6. Tap "Download or Transfer Your Information".
         7. ⚠️ Select "Some of Your Information" (not all your data...).
         8. Scroll down to the "Contacts" section and select "Followers and People/Pages You Follow".
         9. Tap "Next".
@@ -51,11 +54,18 @@ if not connections:
         15. Upload the ZIP file here, and Voilà! 🎉
 
         Note: The email may take some time (hours...) to arrive, depending on the size of your data. 🕒
-        """
+        """,
+        icon="ℹ️"
     )
 
     st.warning(
-        """⚠️ Your data remains private and is automatically deleted after the analysis."""
+        """
+         Your data remains private and is automatically deleted after the analysis.
+        """,
+        icon="⚠️",
+    )
+    st.caption(
+        "[Where does st.file_uploader store uploaded files and when do they get deleted?](https://docs.streamlit.io/knowledge-base/using-streamlit/where-file-uploader-store-when-deleted)"
     )
 
 if connections:
